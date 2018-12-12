@@ -2,13 +2,13 @@
 
 class Student {
 
-  var $first_name;
-  var $last_name;
-  var $country = 'None';
+    var $first_name;
+    var $last_name;
+    var $country = 'None';
 
-  function say_hello() {
-    return 'Hello world!';
-  }
+    function say_hello() {
+        return 'Hello world!';
+    }
 
 }
 
@@ -30,8 +30,8 @@ $class_methods = get_class_methods('Student');
 echo "Class methods: " . implode(', ', $class_methods) . "<br />";
 
 if(method_exists('Student', 'say_hello')) {
-  echo "Method say_hello() exists in Student class.<br />";
+    echo "Method say_hello() exists in Student class.<br />";
 } else {
-  echo "Method say_hello() does not exist in Student class.<br />";
+    echo "Method say_hello() does not exists in Student class.<br />";
 }
 ?>
