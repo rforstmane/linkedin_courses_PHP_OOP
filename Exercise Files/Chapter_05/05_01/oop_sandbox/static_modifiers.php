@@ -16,7 +16,15 @@ class Student {
   public static function add_student() {
     self::$total_students++;
   }
-
 }
 
+echo Student::$grades[0] . "<br />";
+echo Student::motto() . "<br />";
+
+//echo Student::$total_students . "<br />";
+echo Student::count() . "<br />";
+Student::add_student();
+echo Student::count() . "<br />";
+Student::add_student();
+echo Student::count() . "<br />";
 ?>
