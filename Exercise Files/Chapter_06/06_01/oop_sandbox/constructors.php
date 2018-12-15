@@ -7,6 +7,11 @@ class Sofa {
   public $seats = 3;
   public $arms = 2;
 
+
+  public function __construct()
+  {
+    self::$instance_count++;
+  }
 }
 
 class Couch extends Sofa {
@@ -15,6 +20,10 @@ class Couch extends Sofa {
 
 class Loveseat extends Sofa {
   var $seats = 2;
+}
+
+class Renda extends Sofa {
+  var $seats = 0;
 }
 
 $sofa = new Sofa();
@@ -30,10 +39,13 @@ echo '- arms: ' . $couch->arms . '<br />';
 echo '<br />';
 
 $loveseat = new Loveseat();
+$loveseat = new Loveseat();
 echo 'Loveseat<br />';
 echo '- seats: ' . $loveseat->seats . '<br />';
 echo '- arms: ' . $loveseat->arms . '<br />';
 echo '<br />';
+
+
 
 echo 'Instance count: ' . Sofa::$instance_count . '<br />';
 
